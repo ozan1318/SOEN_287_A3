@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title> Assignment 3 Question 2 </title>
+		<script type="text/javascript" src="a3_q2.js"></script>  
+		<style>
+			.nomargin { margin: 0px; min-height: 18px }
+		</style>
+	</head>
+	<body>
+		<div style="border: 1px solid black; width: 20%; padding: 10px">
+			<h1> Order Books Online </h1>
+			<form style="border: 1px solid gray; padding: 10px; width: 70%">
+				<table>
+					<tr>
+						<th> Book </th>
+						<th> Quantity </th>
+						<th> Price </th>
+					</tr>
+					<tr>
+						<td> <label for="book0"> Basic XHTML </label> </td>
+						<td> <input type="text" id="book0" name="book0" size="1"> </td>
+						<td> $19.99 </td>
+					</tr>
+					<tr>
+						<td> <label for="book1"> Intro to PHP </label> </td>
+						<td> <input type="text" id="book1" name="book0" size="1"> </td>
+						<td> $86.00 </td>
+					</tr>
+					<tr>
+						<td> <label for="book2"> Advanced JQuery </label> </td>
+						<td> <input type="text" id="book2" name="book0" size="1"> </td>
+						<td> $55.00 </td>
+					</tr>
+				</table> <br>
+				<input type="button" value="Place Order" onclick="validator()">
+			</form>
+			<p class="nomargin" id="p0"> </p>
+			<p class="nomargin" id="p1"> </p>
+			<p class="nomargin" id="p2"> </p> <br>
+			<p class="nomargin" id="ptotal"> </p>
+		</div>
+	</body>
+</html>
