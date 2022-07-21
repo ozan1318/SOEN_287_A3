@@ -3,6 +3,141 @@
 	<head>
 		<meta charset="utf-8">
 		<title> Assignment 3 Question 1 </title>
-		<script type="text/javascript" src="a3_q1.js"></script>  
+		<script>
+			function addNumsPrompt(){
+				var nums = [];
+				for (let i = 0; i < 5; i++){
+					nums[i] = prompt("Enter a number.");
+					if (Number.isNaN(nums[i])){
+						nums[i] = prompt("Please only enter numbers.");
+					}
+				}
+				addNumbers(nums);
+			}
+			
+			function addNumbers(numArray){
+				let sum = 0;
+				if (Array.isArray(numArray)){
+					for (let i = 0; i < numArray.length; i++){
+						sum += parseInt(numArray[i]);
+					}
+				}
+				else {
+					sum = "incorrect input"
+				}
+				document.getElementById("addNumsResult").innerHTML = "Result: " + sum;
+			}
+			
+			function getCurrentDate(){
+				const now = new Date();
+				document.getElementById("getCurrentDateResult").innerHTML = now.toDateString();
+			}
+			
+			function arrayToStringPrompt(){
+				var words = [];
+				for (let i = 0; i < 5; i++){
+					words[i] = prompt("Enter a string.");
+				}
+				arrayToString(words);
+			}
+			
+			function arrayToString (stringArray){
+				let con = "";
+				if (Array.isArray(stringArray)){
+					for (let i = 0; i < stringArray.length; i++){
+						con += stringArray[i];
+					}
+				}
+				else {
+					con = "incorrect input";
+				}
+				document.getElementById("arrayToStringResult").innerHTML = "Result: " + con;
+			}
+			
+			function findMaxNumber(){
+				let args = [];
+				args[0] = document.getElementById("num0").value;
+				args[1] = document.getElementById("num1").value;
+				args[2] = document.getElementById("num2").value;
+				args[3] = document.getElementById("num3").value;
+				args[4] = document.getElementById("num4").value;
+				let max = args[0];
+				for (let i = 1; i < args.length; i++){
+					if (args[i]>max){
+						max = args[i];
+					}
+				}
+				document.getElementById("findMaxNumberResult").innerHTML = "Result: " + max;
+			}
+			
+			function getDigits(s){
+				let digits = "";
+				var chars = Array.from(s);
+				for (let i = 0; i < chars.length; i++){
+					if (!isNaN(chars[i])){
+						digits += chars[i];
+					}
+				}
+				document.getElementById("getDigitsResult").innerHTML = "Result: " + digits;
+			}
+			
+			function reverseString(s){
+				document.getElementById("reverseStringResult").innerHTML = [...s].reverse().join("");
+			}
+		</script> 
+		<style>
+			.nomargin { margin: 0px; min-height: 18px }
+		</style>
 	</head>
+	<body>
+		<h2> addNumbers </h2>
+		<table>
+			<tr>
+				<td> <input type="button" value="Run addNumbers (This will prompt for 5 inputs)" onclick="addNumsPrompt()"> </td>
+				<td> <p class="nomargin" id="addNumsResult"> </p> <td>
+			</tr>
+		</table>
+		<h2> getCurrentDate </h2>
+		<table>
+			<tr>
+				<td> <input type="button" value="Run getCurrentDate" onclick="getCurrentDate()"> </td>
+				<td> <p class="nomargin" id="getCurrentDateResult"> </p> <td>
+			</tr>
+		</table>
+		<h2> arrayToString </h2>
+		<table>
+			<tr>
+				<td> <input type="button" value="Run arrayToString (This will prompt for 5 inputs)" onclick="arrayToStringPrompt()"> </td>
+				<td> <p class="nomargin" id="arrayToStringResult"> </p> <td>
+			</tr>
+		</table>
+		<h2> findMaxNumber </h2>
+		<table>
+			<tr>
+				<td> <input type="text" id="num0" size="1"> </td>
+				<td> <input type="text" id="num1" size="1"> </td>
+				<td> <input type="text" id="num2" size="1"> </td>
+				<td> <input type="text" id="num3" size="1"> </td>
+				<td> <input type="text" id="num4" size="1"> </td>
+				<td> <input type="button" value="Run findMaxNumber" onclick="findMaxNumber()"> </td>
+				<td> <p class="nomargin" id="findMaxNumberResult"> </p> <td>
+			</tr>
+		</table>
+		<h2> getDigits </h2>
+		<table>
+			<tr>
+				<td> <input type="text" id="digitsString"> </td>
+				<td> <input type="button" value="Run getDigits" onclick="getDigits(document.getElementById('digitsString').value)"> </td>
+				<td> <p class="nomargin" id="getDigitsResult"> </p> <td>
+			</tr>
+		</table>
+		<h2> reverseString </h2>
+		<table>
+			<tr>
+				<td> <input type="text" id="reverseStringInput"> </td>
+				<td> <input type="button" value="Run reverseString" onclick="reverseString(document.getElementById('reverseStringInput').value)"> </td>
+				<td> <p class="nomargin" id="reverseStringResult"> </p> <td>
+			</tr>
+		</table>
+	</body>
 </html>
