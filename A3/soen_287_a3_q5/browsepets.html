@@ -4,6 +4,31 @@
 		<meta charset="utf-8">
 		<title> Adopt A Cat/Dog </title>
 		<link rel="stylesheet" type="text/css" href="q4style.css"/>
+		<script>
+			let imageNum = 0;
+			let imgArray = ["dog1.jpg", "dog2.jpg", "cat1.jpg", "tombili.png"];
+			let nameArray = ["Name: Edgar", "Name: Maynard", "Name: Lily", "Name: Tombili"];
+			let speciesArray = ["Species: Dog", "Species: Dog", "Species: Cat", "Species: Cat"];
+			let breedsArray = ["Breed: Golden Retriever", "Breed: Akbash", "Breed: Van Cat", "Breed: Turkish Angora"];
+			let agesArray = ["Age: 2 Months", "Age: 1 Year", "Age: 5 Years", "Age: 10 Years"];
+			let gendersArray = ["Gender: Male","Gender: Male", "Gender: Female", "Gender: Male"];
+			let getsAlongWithArray = ["Gets along with: Dogs, Cats, Children", "Gets along with: Dogs", "Gets along with: Children", "Gets along with: Dogs, Cats, Children"];
+			let commentsArray = ["Comments: Very cute but small, take extra care.", "Comments: Sometimes loud and aggressive, needs lots of food.", "Comments: Hates other animals.", "Comments: Loves food. Keep your food safe."];
+			function changeImage(n){
+				imageNum = imageNum + n;
+				if (imageNum < 0){imageNum=3;}
+				else if (imageNum > 3){imageNum=0};
+				document.getElementById("slideImg").src = imgArray[imageNum];
+				document.getElementById("petName").innerHTML = nameArray[imageNum];
+				document.getElementById("petSpecies").innerHTML = speciesArray[imageNum];
+				document.getElementById("petBreed").innerHTML = breedsArray[imageNum];
+				document.getElementById("petAge").innerHTML = agesArray[imageNum];
+				document.getElementById("petGender").innerHTML = gendersArray[imageNum];
+				document.getElementById("petGetsAlongWith").innerHTML = getsAlongWithArray[imageNum];
+				document.getElementById("petComments").innerHTML = commentsArray[imageNum];
+				return false;
+			}
+		</script>
 	</head>
 	<body class="page">
 		<div class="headerdiv">
@@ -34,7 +59,21 @@
 					</ul>
 				</td>
 				<td>
-					<div class="contentdiv"> <p> Under Construction </p> </div>
+					<div class="contentdiv">
+						<img id="slideImg" src="dog1.jpg" alt="pet photo" height="450" width="800">
+						<table> <tr>
+							<td> <a href="#" onclick="changeImage(-1)"> <p> Prev </p> </a> </td>
+							<td> <a href="#" onclick="changeImage( 1)"> <p> Next </p> </a> </td>
+						</tr> </table>
+						<p id="petName"> Name: Edgar </p>
+						<p id="petSpecies"> Species: Dog </p>
+						<p id="petBreed"> Breed: Golden Retriever </p>
+						<p id="petAge"> Age: 2 Months </p>
+						<p id="petGender"> Gender: Male </p>
+						<p id="petGetsAlongWith"> Gets along with: Dogs, Cats, Children </p>
+						<p id="petComments"> Comments: Very cute but small, take extra care. </p>
+						<input type="button" value="Interested">
+					</div>
 				</td>
 				<td class="empty"></td>
 			</tr>
