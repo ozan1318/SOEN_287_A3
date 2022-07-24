@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title> Adopt A Cat/Dog </title>
+		<link rel="stylesheet" type="text/css" href="q4style.css"/>
+		<script>
+		
+			const emailregex = /^(([^<>()[]\.,;:\s@"]+(.[^<>()[]\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
+
+			function emailVal(){
+				if (emailregex.test(document.getElementById("owneremail").value)){
+					return true;
+				}
+				else {
+					alert("Invalid Email Address");
+					return false;
+				}
+			}
+
+		</script>
+	</head>
+	<body class="page">
+		<div class="headerdiv">
+			<h1 class="maintitle">
+				<a href="homepage.html"> <img src="logo.jpg" width="99" height="50" alt="logo"/> </a> 
+				<span class="pagename"> Give Away A Cat/Dog </span>
+				<span class="time" id="headerTimeAndDate" onload="dateAndTime()"> </span>
+				<script>
+					function dateAndTime(){
+						let tad = new Date();
+						document.getElementById("headerTimeAndDate").innerHTML = tad.toLocaleString();
+					}
+					setInterval(dateAndTime, 1000);
+				</script>
+			</h1>
+		</div>
+		<table class="content">
+			<tr>
+				<td class="list">
+					<ul class="nostyle"> 
+						<li class="inactive"> <a class="sidemenu" href="homepage.html"> Home page </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="browsepets.html"> Browse Available Pets </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="findapet.html"> Find a Cat/Dog </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="catcare.html"> Cat Care </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="dogcare.html"> Dog Care </a> </li>
+						<li class="active"> <a class="sidemenu" href="giveaway.html"> Have a Pet to Give Away? </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="contactus.html"> Contact Us </a> </li>
+					</ul>
+				</td>
+				<td>
+					<div class="contentdiv">
+						<form class="form">
+							<fieldset class="fset">
+								<legend> Pet Info </legend>
+								<label> Name: </label>
+								<input type="text" id="name" name="name" required> <br> <br>
+								<label> Species: </label>
+								<input type="radio" id="cat" name="species" value="cat" required>
+								<label for="cat"> Cat </label>
+								<input type="radio" id="dog" name="species" value="dog">
+								<label for="dog"> Dog </label> <br> <br>
+								<label> Breed: </label>
+								<input type="text" id="breed" name="breed" required> <br>
+								<label for="mix"> Mixed breed </label>
+								<input type="checkbox" id="mix" name="breed" value="mix"> <br> <br>
+								<label for="age"> Age: </label>
+								<select id="age" required>
+									<option value="0-1/2"> 0-6 months </option>
+									<option value="1/2-1"> 6 months-1 year </option>
+									<option value="1-2"> 1 year-2 years </option>
+									<option value="2-4"> 2 years-4 years </option>
+									<option value="4-7"> 4 years-7 years </option>
+									<option value="7-10"> 7 years-10 years </option>
+									<option value="10-13"> 10 years-13 years </option>
+									<option value="13+"> 13+ years </option>
+								</select>
+								<label> old </label> <br> <br>
+								<label>Gender:</label>
+								<input type="radio" id="female" name="gender" value="female" required>
+								<label for="female">Female</label>
+								<input type="radio" id="male" name="gender" value="male">
+								<label for="male">Male</label> <br> <br>
+								<label> Gets along with: </label>
+								<input type="checkbox" id="getalongcats" name="cats" value="othercats"> 
+								<label for="getalongcats"> Other cats </label>
+								<input type="checkbox" id="getalongdogs" name="dogs" value="otherdogs"> 
+								<label for="getalongdogs"> Other dogs </label>
+								<input type="checkbox" id="getalongkids" name="kids" value="kids"> 
+								<label for="getalongkids"> Small children </label> <br> <br>
+								<label for="comments"> Comments: </label> <br>
+								<textarea rows="5" cols="100" id="comments" name="comments" required> </textarea> <br> <br>
+								<label for="ownername"> Owner's full name: </label>
+								<input type="text" id="ownername" name="ownername" required> <br> <br>
+								<label for="owneremail"> Owner's email address: </label>
+								<input type="email" id="owneremail" name="owneremail" size="30" required>
+							</fieldset> <br>
+							<label> Thank You For Filling Out Our Survey! </label> <br>
+							<input type="submit" value="Submit" onclick="emailVal()"> <input type="reset" value="Reset">
+						</form>
+					</div>
+				</td>
+				<td class="empty"></td>
+			</tr>
+		</table>
+		<div class="footer">
+			<a class="privacy" href="privacy.html"> Privacy Policy </a>
+		</div>
+	</body>
+</html>

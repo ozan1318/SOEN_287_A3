@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+		<title> Adopt A Cat/Dog </title>
+		<link rel="stylesheet" type="text/css" href="q4style.css"/>
+	</head>
+	<body class="page">
+		<div class="headerdiv">
+			<h1 class="maintitle">
+				<a href="homepage.html"> <img src="logo.jpg" width="99" height="50" alt="logo"/> </a> 
+				<span class="pagename"> Adopt A Cat/Dog </span>
+				<span class="time" id="headerTimeAndDate" onload="dateAndTime()"> </span>
+				<script>
+					function dateAndTime(){
+						let tad = new Date();
+						document.getElementById("headerTimeAndDate").innerHTML = tad.toLocaleString();
+					}
+					setInterval(dateAndTime, 1000);
+				</script>
+			</h1>
+		</div>
+		<table class="content">
+			<tr>
+				<td class="list">
+					<ul class="nostyle"> 
+						<li class="active"> <a class="sidemenu" href="homepage.html"> Home page </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="browsepets.html"> Browse Available Pets </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="findapet.html"> Find a Cat/Dog </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="catcare.html"> Cat Care </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="dogcare.html"> Dog Care </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="giveaway.html"> Have a Pet to Give Away? </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="contactus.html"> Contact Us </a> </li>
+					</ul>
+				</td>
+				<td>
+					<div class="contentdiv">
+						<h3 class="homepage"> Hello! Welcome to the Adopt A Cat/Dog Website! </h3>
+						<p class="home"> 
+							In this website, you can adopt a cat or a dog, learn about taking care of your newly adopted pet, or give your cat or dog up for adoption. <br>
+							You can contact us to enquire about pets we have, or browse our page with pets waiting for you. You can also fill out our form to find the <br>
+							perfect companion for you and your family! Once you have your new friend, you can check out our resources to learn more about taking care of it! <br>
+						</p>
+						<p class="home">
+							If you can no longer take care of your pet or if your pet has given birth to many puppies or kittens, you can fill out our form to put them <br>
+							up for adoption! Contact us for more details on putting pets up for adoption. <br> <br>
+						</p>
+						<a> <img src="catanddog.png" alt="image of a cat and a dog" width="300" height="300"> </a>
+					</div>
+				</td>
+				<td class="empty"></td>
+			</tr>
+		</table>
+		<div class="footer">
+			<a class="privacy" href="privacy.html"> Privacy Policy </a>
+			<br> <br> Built on Google Chrome
+		</div>
+	</body>
+</html>

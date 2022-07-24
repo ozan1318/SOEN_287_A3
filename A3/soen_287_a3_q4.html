@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Assignment 3 Question 4 </title>
+		<script>
+			var imageNum = 0;
+			var imgArray = ["aerial.jpg", "supercomputer.jpg", "galaxy.jpg", "lisa.jpg"];
+			var descArray = ["Some of the big questions in science now require big machines to answer them.", "Supercomputers are being used to sift the data for gravitational wave signals.", "When galaxies collide their central supermassive blackholes can merge.", "Technology is already being developed that would take gravitational wave detectors into space."];
+			
+			function changeImage(n){
+				imageNum = imageNum + n;
+				if (imageNum < 0){imageNum=3;}
+				else if (imageNum > 3){imageNum=0};
+				document.getElementById("slideImg").src = imgArray[imageNum];
+				document.getElementById("desc").innerHTML = descArray[imageNum];
+				return false;
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Gravitational waves: A triumph for big science </h1>
+		<div>
+			<img id="slideImg" src="aerial.jpg" alt="aerial shot of LIGO">
+			<table>
+				<td> <a href="#" onclick="changeImage(-1)"> <p> Prev </p> </a> </td>
+				<td> <a href="#" onclick="changeImage( 1)"> <p> Next </p> </a> </td>
+			</table>
+			<p id="desc"> Some of the big questions in science now require big machines to answer them. </p>
+		</div>
+	</body>
+</html>

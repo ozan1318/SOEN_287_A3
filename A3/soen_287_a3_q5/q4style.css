@@ -1,0 +1,42 @@
+.active { background-color: #447b80; color: white; font-size: 30px; padding-left:20px; padding-bottom:20px; padding-top:20px; border-bottom: 1px solid black }
+.inactive { background-color: #89afb3; color: black; font-size: 30px; padding-left: 20px; padding-bottom: 20px; padding-top:20px; border-bottom: 1px solid black }
+.inactive:hover { background-color: #255559; color: white; border-bottom: 1px solid black }
+.nostyle { list-style-type: none; padding: 0; margin-top: 0px; margin-bottom: 0px }
+.inactive:last-child { border-bottom: 1px solid black }
+.active:last-child { border-bottom: 1px solid black }
+ul li:last-child { border-bottom: none }
+
+.content { margin: 0px; width: 100%; border-collapse: collapse }
+.list { width: 15%; vertical-align: top; background-color: #89afb3 }
+
+.maintitle { text-align: center; background-color: #65a0a6; padding: 10px 70px 10px 10px; font-size: 50px; font-weight: bold; margin: 0px; height: 58px }
+.headerdiv { background-color: #65a0a6; margin: 0px }
+h1 img { float: left }
+.time { float: right; font-size: 20px; padding-top: 15px }
+.pagename {  position: absolute; left: 0;  right: 0;  margin-left: auto;  margin-right: auto; width: 520px }
+
+.sidemenu { text-decoration: none; width: 200px; color: inherit }
+.sidemenu:link { text-decoration: none }
+.sidemenu:visited { color: inherit }
+
+.footer { background-color: #135d63; color: white; text-align: center; margin-top: 0px; margin-bottom: 0px; flex-grow: 1; height: 100%; padding: 30px 0 30px 0; font-size: 20px }
+.privacy:link { color: inherit }
+.privacy:visited { color: inherit }
+
+.page { background-color: #afd8db; font-family: Trebuchet MS, sans-serif; margin: 0px; height: 100vh; display: flex; flex-direction: column; padding: 0px }
+
+.contentdiv { text-align: center }
+.empty { width: 15% }
+
+.homepage { text-align: center }
+.home { font-size: 18px }
+.care { padding: 20px }
+
+
+.form { text-align: left; font-size: 18px; color: #0e2022; vertical-align: center; margin-top: 20px; margin-bottom: 20px }
+.fset { border: medium solid #255559; border-radius: 5px }
+
+.contactpage { text-align: left; padding-left: 10%; font-size: 18px; color: #0e2022; vertical-align: center; margin-top: 20px; margin-bottom: 20px }
+
+.sources { text-align: left }
+.sourcelist { text-align: left }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title> Adopt A Cat/Dog </title>
+		<link rel="stylesheet" type="text/css" href="q4style.css"/>
+	</head>
+	<body class="page">
+		<div class="headerdiv">
+			<h1 class="maintitle">
+				<a href="homepage.html"> <img src="logo.jpg" width="99" height="50" alt="logo"/> </a> 
+				<span class="pagename"> Browse Available Pets </span>
+				<span class="time" id="headerTimeAndDate" onload="dateAndTime()"> </span>
+				<script>
+					function dateAndTime(){
+						let tad = new Date();
+						document.getElementById("headerTimeAndDate").innerHTML = tad.toLocaleString();
+					}
+					setInterval(dateAndTime, 1000);
+				</script>
+			</h1>
+		</div>
+		<table class="content">
+			<tr>
+				<td class="list">
+					<ul class="nostyle"> 
+						<li class="inactive"> <a class="sidemenu" href="homepage.html"> Home page </a> </li>
+						<li class="active"> <a class="sidemenu" href="browsepets.html"> Browse Available Pets </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="findapet.html"> Find a Cat/Dog </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="catcare.html"> Cat Care </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="dogcare.html"> Dog Care </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="giveaway.html"> Have a Pet to Give Away? </a> </li>
+						<li class="inactive"> <a class="sidemenu" href="contactus.html"> Contact Us </a> </li>
+					</ul>
+				</td>
+				<td>
+					<div class="contentdiv"> <p> Under Construction </p> </div>
+				</td>
+				<td class="empty"></td>
+			</tr>
+		</table>
+		<div class="footer">
+			<a class="privacy" href="privacy.html"> Privacy Policy </a>
+		</div>
+	</body>
+</html>
